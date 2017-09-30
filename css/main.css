@@ -262,7 +262,7 @@ ul {
   line-height: 1; }
 
 .best {
-  background-image: url(/img/bg/best_bg.jpg);
+  background-image: url(../img/bg/best_bg.jpg);
   background-repeat: no-repeat;
   background-position: center bottom;
   background-size: cover;
