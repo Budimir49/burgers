@@ -1,0 +1,26 @@
+.order
+{
+  background-color: #000;
+}
+
+
+.form__row
+{
+  display: flex;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+}
+.form__input
+{
+  font-size: 16px;
+  padding: 14px;
+  background-color: #fff;
+  border-radius: 7px;
+  flex: 1;
+  margin-left: 20px;
+
+  &:first-child
+  {
+    margin-left: 0;
+  }
+}
