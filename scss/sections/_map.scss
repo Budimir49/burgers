@@ -1,0 +1,62 @@
+.map
+{
+  position: relative;
+  //width: 100%;
+  //height: 100%;
+}
+
+.map-footer
+{
+  position: absolute;
+  height: 60px;
+  width: 100%;
+  background: url(../img/bg/map_bg.jpg) center center no-repeat;
+  background-size:cover;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.map-footer__address
+{
+  @include ubuntu();
+  font-size: 14px;
+  color: #fff;
+  font-style: normal;
+}
+
+.map-footer__phone
+{
+  @include ubuntu(bold);
+  font-size: 14px;
+  color: $orange;
+}
+
+
+.map-footer__right
+{
+  height: 100%;
+  display: flex;
+  align-items: center;
+  margin-right: 5%;
+}
+
+.map-footer__left
+{
+  margin-left: 5%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.map-footer__social
+{
+  margin: 10px;
+  opacity: .25;
+
+  &:hover
+  {
+    opacity: 1;
+  }
+}
