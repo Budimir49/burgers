@@ -14,31 +14,31 @@
 
 .burgers__text
 {
-  margin-left: 20px;
+  margin-left: rem(20px);
 }
 
 .burgers__desc
 {
   @include ubuntu();
   color: #fff;
-  font-size: 14px;
+  font-size: rem(14px);
   line-height: 1.6;
-  margin-top: 40px;
-  margin-bottom: 30px;
+  margin-top: rem(40px);
+  margin-bottom: rem(30px);
 }
 .burgers__price
 {
   @include gagalin();
-  font-size: 72px;
+  font-size: rem(72px);
   color: $orange;
 
   &_small-font
   {
-    font-size:30px;
+    font-size:rem(30px);
   }
   &:first-child
   {
-    margin-right: 10px;
+    margin-right: rem(10px);
   }
 }
 
@@ -57,24 +57,24 @@
 {
   display: flex;
   align-items: baseline;
-  margin-right: 30px;
+  margin-right: rem(30px);
 }
 
 .burgers__image
 {
   position: relative;
 
-  margin-top:100px;
+  margin-top: rem(100px);
 }
 
 .burgers__composition
 {
   position: absolute;
-  top: -80px;
+  top: rem(-80px);
   left: 0;
   z-index: 600;
-  width: 90px;
-  height: 90px;
+  width: rem(90px);
+  height: rem(90px);
   background-color: rgba($orange, .4);
   border-radius: 8%;
   display: flex;
@@ -85,22 +85,22 @@
 
 .burgers__composition-icon
 {
-  width: 45px;
-  height: 45px;
+  width: rem(45px);
+  height: rem(45px);
   fill: #fff;
 }
 
 .burgers__composition-desc
 {
   @include gagalin;
-  font-size:14px;
+  font-size: rem(14px);
   color: #fff;
 }
 
 .burgers__weight
 {
   position: absolute;
-  bottom: -70px;
+  bottom: rem(-70px);
   left: 0;
   z-index: 600;
   display: flex;
@@ -111,8 +111,8 @@
 
 .burgers__weight-pic
 {
-  width: 60px;
-  height: 60px;
+  width: rem(60px);
+  height: rem(60px);
   position: relative;
 
 }
@@ -127,14 +127,14 @@
 .burgers__weight-desc
 {
   @include gagalin;
-  font-size:14px;
+  font-size: rem(14px);
   color: rgba(#fff, .5);
 }
 
 .burgers__weight-value
 {
   @include gagalin;
-  font-size:14px;
+  font-size: rem(14px);
   color: rgba(#fff, .5);
   position: absolute;
 

@@ -28,7 +28,7 @@
   color: #fff;
   background-color: rgba($black, 0.93);
 
-  font-size:16px;
+  font-size: rem(16px);
   @include ubuntu();
   line-height: 1.5;
   padding: 0;
@@ -45,7 +45,7 @@
   {
     .menu-list__text
     {
-      width: 540px;
+      width: rem(540px);
       padding: 10%;
     }
   }
@@ -56,7 +56,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   cursor: pointer;
-  width: 80px;
+  width: rem(80px);
   height: 100%;
   position: relative;
   display: flex;
@@ -79,15 +79,15 @@
 .menu-list__title-text
 {
   @include gagalin();
-  font-size: 40px;
+  font-size: rem(40px);
   transform: rotate(-90deg);
   text-align: center;
   color: #fff;
-  width: 300px;
-  height: 80px;
+  width: rem(300px);
+  height: rem(80px);
   display: block;
   white-space: nowrap;
   margin: 0;
   padding: 0;
-  line-height: 80px;
+  line-height: rem(80px);
 }

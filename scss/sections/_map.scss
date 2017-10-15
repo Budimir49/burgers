@@ -8,7 +8,7 @@
 .map-footer
 {
   position: absolute;
-  height: 60px;
+  height: rem(60px);
   width: 100%;
   background: url(../img/bg/map_bg.jpg) center center no-repeat;
   background-size:cover;
@@ -21,7 +21,7 @@
 .map-footer__address
 {
   @include ubuntu();
-  font-size: 14px;
+  font-size: rem(14px);
   color: #fff;
   font-style: normal;
 }
@@ -29,7 +29,7 @@
 .map-footer__phone
 {
   @include ubuntu(bold);
-  font-size: 14px;
+  font-size: rem(14px);
   color: $orange;
 }
 
@@ -52,7 +52,7 @@
 }
 .map-footer__social
 {
-  margin: 10px;
+  margin: rem(10px);
   opacity: .25;
 
   &:hover

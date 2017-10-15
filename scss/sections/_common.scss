@@ -1,15 +1,15 @@
 .btn
 {
-  padding: 10px 15px;
+  padding: rem(10px) rem(15px);
   background: $orange;
   text-decoration: none;
   text-transform: uppercase;
-  border-radius: 5px;
+  border-radius: rem(5px);
   color: #fff;
   display: inline-flex;
   border: 0;
   cursor: pointer;
-  font-size: 13px;
+  font-size: rem(13px);
 
   &:hover
   {
@@ -20,7 +20,7 @@
   {
     background: none;
     text-transform: none;
-    font-size: 14px;
+    font-size: rem(14px);
 
     &:hover
     {
@@ -35,12 +35,12 @@
 .section-title
 {
   @include gagalin();
-  font-size: 72px;
+  font-size: rem(72px);
   color: #f9b43b;;
   font-weight: 400;
   line-height: 1;
   margin: 0;
-  padding-top: 80px;
+  margin-top: rem(80px);
 
   &_color-black
   {
@@ -58,13 +58,22 @@
     text-align: center;
   }
 
+  &_nomargin
+  {
+    margin: 0;
+    flex-basis: rem(250px);
+  }
+
+  @include tablets() {
+    margin-top: 10px;
+  }
 }
 
 .arrow-scroll
 {
   position: absolute;
-  width: 29px;
-  height: 14px;
+  width: rem(29px);
+  height: rem(14px);
   z-index: 500;
 
   &_bot
@@ -100,13 +109,17 @@
 .fixed-menu
 {
   position: fixed;
-  top:  80px;
-  right: 45px;
+  top:  rem(80px);
+  right: rem(45px);
+
+  @include tablets() {
+    display: none;
+  }
 }
 
 .fixed-menu__item
 {
-  margin-bottom: 10px;
+  margin-bottom: rem(10px);
 
   &.active
   {
@@ -119,8 +132,8 @@
 
 .fixed-menu__link
 {
-  width: 16px;
-  height: 16px;
+  width: rem(16px);
+  height: rem(16px);
   border-radius: 50%;
   position: relative;
   display: block;
@@ -134,8 +147,8 @@
   &:before
   {
     content: '';
-    width: 6px;
-    height: 6px;
+    width: rem(6px);
+    height: rem(6px);
     border-radius: 50%;
     background-color: #fff;
     position: absolute;

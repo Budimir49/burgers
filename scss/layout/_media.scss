@@ -1,0 +1,16 @@
+@mixin tablets
+{
+  @media screen and (max-width: $tablet)
+  {
+    @content
+  }
+}
+
+
+@mixin phones
+{
+  @media screen and (max-width: $phone)
+  {
+    @content
+  }
+}

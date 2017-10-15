@@ -3,7 +3,6 @@
   position: relative;
   width: 100%;
   min-height: 100%;
-  min-width: 940px + 20px;
   overflow: hidden;
 }
 
@@ -11,7 +10,8 @@
 {
   margin: 0 auto;
   position: relative;
-  width: 940px;
+  width: 95%;
+  max-width: 940px;
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -24,7 +24,7 @@
 
 .section
 {
-  min-height: 650px;
+  min-height: rem(650px);
   height: 100vh;
   position: relative;
 
