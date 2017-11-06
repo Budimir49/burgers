@@ -17,7 +17,8 @@
 {
   display: flex;
   align-items: center;
-  margin-top: rem(10px);
+  margin-top: rem(30px);
+
 }
 
 .header__btns
@@ -70,7 +71,14 @@
   font-size: rem(13px);
   text-transform: uppercase;
   text-decoration: none;
+
+  &:hover
+  {
+    text-decoration: underline;
+  }
 }
+
+
 
 .hero__desc
 {
@@ -101,6 +109,7 @@
 {
   display: flex;
   align-items: center;
+  width: 100%;
 
   @include tablets() {
     flex-direction: column;
@@ -110,16 +119,33 @@
 
 .hero__text
 {
+  margin-top: rem(80px);
   margin-left: rem(20px);
 
   @include tablets() {
     text-align: center;
+    margin-left: 0;
+    margin-top: rem(20px);
+  }
+
+  @include phones()
+  {
+    margin-top: rem(10px);
+  }
+}
+
+.hero__image
+{
+  @include phones()
+  {
+    width: 90%;
   }
 }
 
 .hero__image-pic
 {
   max-width: 100%;
+
 }
 
 
@@ -131,6 +157,7 @@
   margin-left: rem(30px);
   margin-right: rem(10px);
   display: none;
+  z-index: 5;
 
   @include tablets() {
     display: flex;
@@ -143,10 +170,15 @@
     width: 24px;
     height: 4px;
     border-radius: 2px;
+    display: none;
+
+    @include tablets() {
+      display: block;
+    }
   }
 
   &:before, &:after {
-    content: "";
+    content: '';
     display: block;
     position: absolute;
   }
@@ -158,4 +190,93 @@
   &:after {
     bottom: 0;
   }
+}
+
+
+.header_burger
+{
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 20px;
+  margin-left: 8px;
+  margin-top: rem(10px);
+}
+
+.burger-nav
+{
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  right: 0;
+  position: absolute;
+  height: 0;
+  background-color: #303334;
+  z-index: 500;
+
+}
+
+.burger-nav__list
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.burger-nav__link
+{
+  @include ubuntu();
+  color: #fff;
+  font-size: rem(24px);
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+
+.burger-nav__item
+{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &:last-child
+  {
+    &:after
+    {
+      display: none;
+    }
+
+  }
+
+  &:after
+  {
+    display: block;
+    content: '';
+    @include circle(rem(4px), #fff);
+    margin: rem(25px) 0;
+  }
+
+
+
+}
+
+
+.btn-close
+{
+  margin-top: rem(5px);
+  margin-right: rem(12px);
+  z-index: 501;
+  position: relative;
+  display: none;
+  cursor: pointer;
+  height: 20px;
+  width: 20px;
+  background: url(../img/close.png) center center no-repeat;
 }

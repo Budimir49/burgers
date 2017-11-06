@@ -16,6 +16,14 @@
   bottom: 0;
   display: flex;
   justify-content: space-between;
+  z-index: 1000;
+
+  @include phones()
+  {
+    height: rem(115px);
+    flex-direction: column;
+
+  }
 }
 
 .map-footer__address
@@ -40,6 +48,12 @@
   display: flex;
   align-items: center;
   margin-right: 5%;
+
+  @include phones()
+  {
+    justify-content: center;
+    margin-right: 0;
+  }
 }
 
 .map-footer__left
@@ -49,6 +63,11 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+
+  @include phones()
+  {
+    align-items: center;
+  }
 }
 .map-footer__social
 {

@@ -5,17 +5,21 @@
   background-position: center center;
   background-size: cover;
   text-align: center;
-
-
-
+  display: flex;
+  justify-content: center;
 }
 
 .best__item
 {
   margin: 0 rem(15px);
-  flex: 1;
-  min-width: rem(300px);
+  width: 33%;
 
+  @include phones()
+  {
+    display: flex;
+    width: 100%;
+    align-items: center;
+  }
 
 }
 
@@ -24,18 +28,46 @@
   @include ubuntu();
   font-size: rem(14px);
   line-height: 1.5;
+
+  @include phones()
+  {
+    text-align: left;
+  }
 }
+
 .best__list
 {
   display: flex;
   align-items: center;
   height: 70%;
+
+  @include phones()
+  {
+    flex-direction: column;
+    width: 90%;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+
+
+  }
 }
 
 .best__pic
 {
-  height: rem(90px);
-  width: auto;
+  @include phones()
+  {
+    width: 50%;
+  }
+}
+
+.best__text
+{
+  @include phones()
+  {
+    width: 90%;
+    margin-left: 10px;
+  }
 }
 
 .best__title
@@ -43,26 +75,101 @@
   margin-top: rem(30px);
   @include lifehack();
   font-size: rem(24px);
+
+  @include phones()
+  {
+    text-align: left;
+  }
 }
 
 .best__icon
 {
-  width: 100%;
-  height: 100%;
+  width: 90%;
+  height: rem(100px);
+}
 
-  &_orange
+.background-element
+{
+  position: absolute;
+}
+
+.elem-1
+{
+  top: rem(30px);
+  right: rem(-150px);
+  width: rem(400px);
+
+  @include tablets()
   {
-    fill: $orange;
+    top: rem(20px);
+    right: rem(-130px);
+    width: rem(300px);
   }
 
-  &_yellow
+  @include phones()
   {
-    fill: $yellow;
-  }
-
-  &_green
-  {
-    fill: $green;
+    right: rem(-500px);
   }
 }
 
+.elem-2
+{
+  top: rem(40px);
+  left: rem(-200px);
+  width: rem(400px);
+
+  @include tablets()
+  {
+    top: rem(20px);
+    left: rem(-130px);
+    width: rem(300px);
+  }
+
+  @include phones()
+  {
+    left: rem(-500px);
+  }
+}
+
+
+.elem-3
+{
+  bottom: rem(-150px);
+  right: rem(-100px);
+  width: rem(550px);
+
+  @include tablets()
+  {
+    bottom: rem(-110px);
+    right: rem(-70px);
+    width: rem(450px);
+  }
+
+  @include phones()
+  {
+    right: rem(-100px);
+    bottom: rem(-130px);
+    width: rem(350px);
+  }
+}
+
+.elem-4
+{
+  bottom: rem(-200px);
+  left: rem(200px);
+  width: rem(500px);
+
+  @include tablets()
+  {
+    bottom: rem(-60px);
+    left: rem(-100px);
+    width: rem(400px);
+  }
+
+  @include phones()
+  {
+    left: rem(-120px);
+    bottom: rem(-100px);
+    width: rem(300px);
+  }
+}

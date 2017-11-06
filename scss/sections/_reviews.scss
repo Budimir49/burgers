@@ -1,6 +1,7 @@
 .rewiews
 {
   background-color: #000;
+  position: relative;
 }
 
 .reviews__list
@@ -9,6 +10,8 @@
   width: 100%;
   height: 100%;
   flex-wrap: wrap;
+
+
 }
 
 .reviews__item
@@ -20,6 +23,13 @@
   background-repeat: no-repeat;
   position: relative;
   filter: grayscale(100%);
+
+  @include tablets()
+  {
+    width: 50%;
+    height: 25%;
+  }
+
   &:hover
   {
     .reviews__hover
@@ -55,9 +65,102 @@
 {
   color: #fff;
   margin-bottom: rem(10px);
+  @include gagalin();
+
+  @include tablets()
+  {
+    text-align: center;
+  }
+
+  @include phones()
+  {
+    font-size: rem(24px);
+  }
 }
 
 .reviews__text
 {
   color: #fff;
+  font-size: rem(16px);
+  margin-bottom: rem(10px);
+
+  @include tablets()
+  {
+    text-align: center;
+    font-size: rem(14px);
+  }
+
+  @include phones()
+  {
+    display: none;
+    font-size: rem(12px);
+  }
 }
+
+.reviews__text-long
+{
+  display: none;
+}
+
+.modal__wrapper
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  opacity: 0.82;
+  background-color: #2f3234;
+  z-index: 600;
+  display: none;
+}
+.modal__content
+{
+  position: absolute;
+  width: rem(460px);
+  height: auto;
+  background-color: #fff;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 10px;
+  opacity: 1;
+  z-index: 601;
+  flex-direction: column;
+  align-items: center;
+  display: none;
+
+  @include phones()
+  {
+    width: rem(400px);
+  }
+}
+
+.modal__title
+{
+  @include gagalin();
+  font-size: rem(18px);
+  width: 90%;
+  margin: rem(30px);
+
+}
+
+.modal__text
+{
+  @include ubuntu();
+  font-size: rem(16px);
+  width: 90%;
+  margin-bottom: rem(30px);
+}
+
+.modal__close
+{
+  position: absolute;
+  right: rem(15px);
+  top: rem(15px);
+  background: url(../img/close-modal.png) center center no-repeat;
+  height: rem(20px);
+  width: rem(20px);
+  cursor: pointer;
+}
+

@@ -39,8 +39,6 @@
   color: #f9b43b;;
   font-weight: 400;
   line-height: 1;
-  margin: 0;
-  margin-top: rem(80px);
 
   &_color-black
   {
@@ -58,45 +56,101 @@
     text-align: center;
   }
 
-  &_nomargin
+  &_mt
   {
-    margin: 0;
-    flex-basis: rem(250px);
+    margin-top: rem(80px);
+
+    @include phones()
+    {
+      margin-top: rem(50px);
+    }
   }
 
-  @include tablets() {
-    margin-top: 10px;
+
+  &_order
+  {
+
+    margin-top: rem(80px);
+    @include phones()
+    {
+      margin-top: rem(10px);
+    }
+
+    @include littleHeight()
+    {
+      display: none;
+    }
+  }
+
+  @include phones()
+  {
+    font-size: rem(50px);
   }
 }
 
 .arrow-scroll
 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
   position: absolute;
-  width: rem(29px);
-  height: rem(14px);
-  z-index: 500;
+  width: rem(50px);
+  height: rem(50px);
+  z-index: 300;
 
   &_bot
   {
     bottom: 5%;
     left: 50%;
     transform: translateX(-50%);
+
+    @include phones()
+    {
+      bottom: 2%;
+    }
   }
 
   &_left
   {
     top: 50%;
-    left: 5%;
+    left: 7%;
     transform: rotate(90deg) translateY(-50%);
+
+    @include tablets()
+    {
+      left: -2%;
+    }
+
+    @include phones()
+    {
+      left: -5%;
+    }
   }
 
   &_right
   {
     top: 50%;
-    right: 5%;
+    right: 7%;
     transform: rotate(-90deg) translateY(-50%);
+
+    @include tablets()
+    {
+      right: -2%;
+    }
+
+    @include phones()
+    {
+      right: -5%;
+    }
   }
 
+}
+
+.arrow-scroll_wrapper
+{
+  width: rem(29px);
+  height: rem(14px);
 }
 
 .arrow-scroll__icon
@@ -111,6 +165,7 @@
   position: fixed;
   top:  rem(80px);
   right: rem(45px);
+
 
   @include tablets() {
     display: none;
@@ -159,4 +214,32 @@
   }
 }
 
+.review__btn
+{
+  @include tablets()
+  {
+    display: flex;
+    justify-content: center;
+  }
+}
 
+.icon-orange
+{
+  fill: $orange;
+}
+
+.icon-yellow
+{
+  fill: $yellow;
+}
+
+.icon-green
+{
+  fill: $green;
+}
+
+.logo
+{
+  position: absolute;
+  z-index: 501;
+}

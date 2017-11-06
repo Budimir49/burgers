@@ -11,6 +11,11 @@
   position: absolute;
   top: 12%;
   left: 7%;
+
+  @include tablets()
+  {
+    top: 8%;
+  }
 }
 
 .menu-list
@@ -22,6 +27,8 @@
 
 .menu-list__text
 {
+  display: flex;
+  justify-content: center;
   width: 0;
   overflow: hidden;
   position: relative;
@@ -31,7 +38,24 @@
   font-size: rem(16px);
   @include ubuntu();
   line-height: 1.5;
-  padding: 0;
+
+
+  @include phones()
+  {
+    font-size: rem(16px);
+  }
+}
+
+.menu-list__p
+{
+  padding-top: 10%;
+  width: 80%;
+
+  @include phones()
+  {
+    padding-top: 5%;
+    width: 90%;
+  }
 }
 
 
@@ -45,8 +69,7 @@
   {
     .menu-list__text
     {
-      width: rem(540px);
-      padding: 10%;
+
     }
   }
 }
@@ -74,6 +97,16 @@
     bottom: 0;
     right: 0;
   }
+
+  @include tablets()
+  {
+
+  }
+
+  @include phones()
+  {
+    width: rem(60px);
+  }
 }
 
 .menu-list__title-text
@@ -81,7 +114,6 @@
   @include gagalin();
   font-size: rem(40px);
   transform: rotate(-90deg);
-  text-align: center;
   color: #fff;
   width: rem(300px);
   height: rem(80px);
