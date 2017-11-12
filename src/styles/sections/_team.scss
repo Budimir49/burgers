@@ -1,0 +1,160 @@
+.team
+{
+  background: url(../img/bg/team_bg.jpg) center center no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.team_section
+{
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 50%;
+  background-color: rgba($black, 0.93);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @include tablets()
+  {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+
+.team_content
+{
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+}
+
+.team-acco
+{
+  margin-top: rem(80px);
+
+  @include phones()
+  {
+    margin-top: rem(30px);
+  }
+}
+
+.team-acco__title
+{
+  cursor: pointer;
+  font-size: rem(14px);
+  color: #fff;
+  margin: rem(10px);
+  display: flex;
+  align-items: center;
+  @include gagalin();
+
+  @include tablets()
+  {
+    font-size: rem(25px);
+    justify-content: center;
+  }
+
+  &:before
+  {
+    content: '';
+    width: 0;
+    height: 0;
+    border: 9px solid transparent;
+    border-top-color: $yellow;
+    border-bottom: none;
+    margin-right: rem(10px);
+    transition: transform .3s;
+  }
+}
+
+.team-acco__item
+{
+  margin-bottom: rem(35px);
+
+  &.active
+  {
+    .team-acco__title
+    {
+      color: $yellow;
+
+      &:before
+      {
+        transition: transform .3s;
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+
+  @include phones()
+  {
+    margin-bottom: rem(15px);
+  }
+}
+
+
+.team-acco__content
+{
+  display: flex;
+  overflow: hidden;
+  height: 0;
+  //transition: height 2s ease;
+
+  @include tablets()
+  {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.team-acco__desc
+{
+  width: 80%;
+  margin-left: 5%;
+}
+
+.team-acco__desc-occ
+{
+  color: #fff;
+  @include ubuntu(bold);
+  font-size: rem(15px);
+  margin-bottom: rem(10px);
+
+  @include tablets()
+  {
+    margin-top: rem(10px);
+  }
+
+}
+
+.team-acco__desc-text
+{
+  color: #fff;
+  @include tablets()
+  {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+.team-acco__avatar
+{
+  width: rem(100px);
+  height: rem(100px);
+  overflow: hidden;
+  border-radius: 50%;
+  position: relative;
+}
+
+.team-acco__avatar-pic
+{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+

@@ -1,0 +1,285 @@
+
+
+.order
+{
+  background-color: #000;
+  background: url(../img/bg/order_bg.jpg) center center no-repeat;
+  background-size: cover;
+}
+
+.form__container
+{
+  display: flex;
+  justify-content: space-between;
+
+  @include tablets()
+  {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  @include littleHeight()
+  {
+    margin-top: rem(50px);
+  }
+
+}
+
+.form__left
+{
+  width: 49%;
+
+  @include tablets()
+  {
+    width: 60%;
+  }
+  @include phones()
+  {
+    width: 45%;
+  }
+
+}
+
+.form__right
+{
+  width: 49%;
+
+  @include tablets()
+  {
+    width: 60%;
+  }
+
+  @include phones()
+  {
+    width: 45%;
+  }
+
+}
+
+.form__row
+{
+  width: 100%;
+  display: flex;
+  margin-bottom: rem(20px);
+  justify-content: space-between;
+
+  @include littleHeight()
+  {
+    margin-bottom: rem(10px);
+  }
+}
+
+.form__col
+{
+  display: flex;
+
+
+  &_column
+  {
+    flex-direction: column;
+  }
+
+  &_line
+  {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  @include phones()
+  {
+    justify-content: center;
+  }
+}
+
+
+
+.form__label
+{
+  display: flex;
+  align-items: center;
+  font-size: rem(14px);
+  @include ubuntu();
+  color: #fff;
+  margin-bottom: rem(7px);
+
+}
+
+.form__input
+{
+  font-size: rem(16px);
+  padding: rem(8px);
+  background-color: #fff;
+  border-radius: rem(7px);
+
+  @include littleHeight()
+  {
+    padding: rem(4px);
+  }
+
+}
+
+.form__radio-label
+{
+  margin-left: rem(7px);
+}
+
+.form__checkbox-label
+{
+  margin-left: (7px);
+}
+
+.form__radio
+{
+  display: none;
+
+  &:checked
+  {
+    & + .form__radio-fake
+    {
+
+      &:after
+      {
+        display: block;
+      }
+    }
+  }
+}
+
+.form__radio-fake
+{
+  display: block;
+  @include circle(rem(15px), #fff);
+  position: relative;
+
+  &:after
+  {
+    content: '';
+    display: none;
+    @include circle(rem(7px), $orange);
+    position: absolute;
+    align-items: center;
+    top: rem(4px);
+    left: rem(4px);
+  }
+}
+
+
+.form__checkbox-fake
+{
+  display: block;
+  width: rem(15px);
+  height: rem(15px);
+  background-color: #fff;
+  background-repeat: no-repeat;
+  background-position: center;
+
+
+}
+.form__checkbox
+{
+  display: none;
+
+  &:checked
+  {
+    & + .form__checkbox-fake
+    {
+      background-image: url(../img/checked.png);
+    }
+
+  }
+
+}
+
+.form__textarea
+{
+  border-radius: rem(7px);
+  padding: rem(8px);
+  resize: none;
+  height: rem(110px);
+}
+
+.form__input_quatro
+{
+  width: 22%;
+}
+
+.form__input_two
+{
+  width: 48%;
+}
+
+.form__input_one
+{
+  width: 100%;
+}
+
+.form_btns
+{
+  @include phones()
+  {
+    display: flex;
+    justify-content: center;
+  }
+
+
+}
+
+
+.form-input_error,
+.form-textarea_error {
+  background-color: lighten($orange, 30%);
+}
+
+
+.form
+{
+  height: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @include phones()
+  {
+    height: 90%;
+  }
+}
+
+.order__success
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 2000;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  font-size: rem(24px);
+
+
+  p
+  {
+    @include gagalin();
+    color: $yellow;
+  }
+}
+
+.blur
+{
+  width: 100%;
+  height: 100%;
+  transition: all 3s ease;
+
+
+}
+
+
+.form__label_little-height
+{
+
+  @include littleHeight()
+  {
+    display: none;
+  }
+}

@@ -1,0 +1,36 @@
+.wrapper
+{
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.container
+{
+  margin: 0 auto;
+  position: relative;
+  width: 95%;
+  max-width: 940px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.main-content
+{
+  height: 100%;
+  transition: transform 0.5s;
+  will-change: transform;
+}
+
+.section
+{
+  height: 100%;
+  position: relative;
+}
+
+.vertical-center
+{
+  align-items: center;
+  justify-content: center;
+}

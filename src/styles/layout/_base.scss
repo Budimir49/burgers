@@ -1,0 +1,39 @@
+html
+{
+    font-size: 16px;
+
+    @include tablets
+    {
+        font-size: rem(15px);
+    }
+
+    @include phones
+    {
+        font-size: rem(13px);
+    }
+    height: 100%;
+}
+
+
+body
+{
+    margin: 0;
+    padding: 0;
+    font-family: 'Ubuntu', Arial, sans-serif;
+    line-height: 1.42;
+    color: $dark;
+    overflow: hidden;
+    height: 100%;
+}
+
+*, *::before, *::after
+{
+    box-sizing: border-box;
+}
+
+ul
+{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
